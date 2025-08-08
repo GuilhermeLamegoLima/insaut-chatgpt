@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
@@ -25,5 +25,5 @@ io.on('connection', (socket) => {
   });
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
